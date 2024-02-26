@@ -17,7 +17,7 @@ export default async function  Appointment(){
     const appointMentList: AppointmentsResponse = await getAppointmentList()
     return (
         <div className={s.appointment}>
-            <label className={s.label}>Today's Appointment List</label>
+            <label className={s.label}>Today&apos;s Appointment List</label>
             <AppointmentList list={appointMentList.appointments}/>
         </div>
     );
