@@ -3,6 +3,7 @@ import axios from "axios";
 import { FaCalendarAlt, FaClock, FaStar } from "react-icons/fa";
 import { BiDotsVertical } from "react-icons/bi";
 
+//function to allocate random colors to the patients
 const RandomColor = () => {
   let color = "#";
   const letters = "0123456789ABCDEF";
@@ -13,6 +14,7 @@ const RandomColor = () => {
   return color;
 };
 
+//function to change date format from "24-02-2024" to "24 Feb 2024"
 const formatDate = (dateString) => {
   const options = { year: "numeric", month: "short", day: "numeric" };
   return new Date(dateString).toLocaleDateString("en-GB", options);
@@ -21,9 +23,11 @@ const formatDate = (dateString) => {
 const Table = () => {
   const [appointments, setAppointments] = useState([]);
 
+  
   useEffect(() => {
     const requestData = async () => {
       try {
+        // sending request to the endpoint using axios
         const response = await axios.get(
           "https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json"
         );
@@ -33,12 +37,14 @@ const Table = () => {
       }
     };
 
-    requestData();
+    requestData(); //returning the fetched data
   }, []);
 
   return (
     <div className="overflow-x-auto overflow-y-auto rounded-3xl">
+      {/* creating table using the tailwind   */}
       <table className="table-auto min-w-full border rounded-xl  border-white-300 border-transparent md:table-fixed ">
+         {/* setting up column headers  */}
         <thead className="bg-gray-100 h">
           <tr>
             <th className="px-6 py-5 text-left text-xs font-small text-gray-500 uppercase tracking-wider">
@@ -63,13 +69,15 @@ const Table = () => {
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
+           {/* mapping the data fetched from the endpoint to make the table dynamic */}
           {appointments.map((data, index) => (
             <tr key={index}>
               <td className="px-6 py-4 whitespace-nowrap">
                 <div className="flex items-center ">
+                  {/* used the random color generator function to generate random colors for every user */}
                   <div
                     className="rounded-full w-9 h-9 mr-2  "
-                    style={{ backgroundColor: RandomColor() }}
+                    style={{ backgroundColor: RandomColor() }}  
                   ></div>
                   <span className="flex items-start flex-col ">
                     <span>{data.patient_name}</span>
