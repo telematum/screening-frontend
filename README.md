@@ -12,6 +12,6 @@ Looking forward to receiving your insights on or before March 3, 2024. If you ha
 ## Deliverables
 ![](Figma-Mockup.png)
 
-After carefully evaluating the mockup , please create a rect application that calls [this mock json gist](https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/80882759f616955dea7ae334829d21c9f893c98c/todays.json) and display the data. Save time by not having images placed , rather use a colored placeholder.
+After carefully evaluating the mockup , please create a rect application that calls [this mock json gist](https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json) and display the data. Save time by not having images placed , rather use a colored placeholder.
 
 When you are done, raise a PR in this repo with the source code and the built result ( the `dist` folder ) as well. Make sure to mention your email and Name in the PR , as that would allow us to relate your application with the PR.
