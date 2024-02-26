@@ -1,91 +1,47 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const appointmentList = [
-  {
-    id: 1,
-    name: "Pankaj Singh",
-    contact: "+152 1234 567",
-    date: "20 Jan 2024",
-    Time: "10:18",
-    doctor: "Dr. Sarah Smith",
-    injury: "Fever",
-    image: "https://bit.ly/3vaOTe1",
-    isAvailable: true,
-  },
-  {
-    id: 2,
-    name: "Cara Stevens",
-    contact: "+152 1234 567",
-    date: "20 Jan 2024",
-    Time: "10:18",
-    doctor: "Dr. Rajesh",
-    injury: "Malaria",
-    image: "https://bit.ly/3I9nL2D",
-    isAvailable: true,
-  },
-  {
-    id: 3,
-    name: "Pooja Patel",
-    contact: "+152 1234 567",
-    date: "20 Jan 2024",
-    Time: "10:18",
-    doctor: "Dr. Megha Trivedi",
-    injury: "Cholera",
-    image: "https://bit.ly/33HnjK0",
-    isAvailable: true,
-  },
-  {
-    id: 4,
-    name: "Megha Trivedi",
-    contact: "+152 1234 567",
-    date: "20 Jan 2024",
-    Time: "10:18",
-    doctor: "Dr. Rajesh",
-    injury: "Fever",
-    image:
-      "https://files.strengthsprofile.com/Testimonials/Images/Strengths_Profile_testimonial_98_image.png?v=637424298494292838",
-    isAvailable: false,
-  },
-  {
-    id: 5,
-    name: "John Doe",
-    contact: "+152 1234 567",
-    date: "20 Jan 2024",
-    Time: "10:18",
-    doctor: "Dr. Cara Stevens",
-    injury: "Cholera",
-    image:
-      "https://www.ultimatebeaver.com/wp-content/uploads/bb-plugin/cache/photo-gallery-img-02-circle.jpg",
-    isAvailable: false,
-  },
-  {
-    id: 6,
-    name: "Nasir Uddin",
-    contact: "+152 1234 567",
-    date: "20 Jan 2024",
-    Time: "10:18",
-    doctor: "Dr. Rajesh",
-    injury: "Fever",
-    image: "http://thepointe.uk/assets/img/team/5.jpg",
-    isAvailable: true,
-  },
-];
+interface Patient {
+  patient_name: string;
+  mobile_number: string;
+  appointment_date: string;
+  appointment_time: string;
+  doctor: string;
+  injury: string;
+}
 
 const tableHeader = ["patients", "date", "time", "doctor", "injury", "action"];
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [selectedId, setSelectedId] = useState<number | null>(null);
+  const [selectedPatient, setSelectedPatient] = useState<string | null>(null);
+  const [appointmentList, setAppointmentList] = useState<Patient[]>([]);
 
-  const handleActionClick = (id: number) => {
+  const handleActionClick = (id: string) => {
     setIsMenuOpen(!isMenuOpen);
-    setSelectedId(id);
+    setSelectedPatient(id);
   };
 
   const handleButtonBlur = () => {
     setIsMenuOpen(false);
-    setSelectedId(null);
+    setSelectedPatient(null);
   };
+
+  useEffect(() => {
+    const fetchGistData = async () => {
+      try {
+        const response = await fetch(
+          "https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json"
+        );
+        const data = await response.json();
+        setAppointmentList(data.appointments);
+      } catch (error) {
+        console.error("Error fetching Gist data:", error);
+      }
+    };
+
+    fetchGistData();
+  }, []);
+
   return (
     <div className="flex flex-col">
       <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -113,23 +69,17 @@ export default function App() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200 min-w-full">
-                {appointmentList.map((patient, index) => (
-                  <tr key={patient.name} className="table-row">
+                {appointmentList?.map((patient, index) => (
+                  <tr key={patient.patient_name} className="table-row">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
-                        <div className="flex-shrink-0 h-9 w-9">
-                          <img
-                            className="h-9 w-9 rounded-full object-cover"
-                            src={patient.image}
-                            alt=""
-                          />
-                        </div>
+                        <div className="rounded-full h-9 w-9 bg-red-400" />
                         <div className="ml-4">
                           <div className="text-sm font-medium text-[#393940]">
-                            {patient.name}
+                            {patient.patient_name}
                           </div>
                           <div className="text-xs text-[#7b8693]">
-                            {patient.contact}
+                            {patient.mobile_number}
                           </div>
                         </div>
                       </div>
@@ -137,24 +87,22 @@ export default function App() {
                     <td className="px-6 py-4 whitespace-nowrap text-[#676F93]">
                       <div className="flex items-center gap-2">
                         <i className="fa-regular fa-calendar"></i>
-                        <div className="text-sm">{patient.date}</div>
+                        <div className="text-sm">
+                          {patient.appointment_date}
+                        </div>
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-[#676F93]">
                       <div className="flex items-center gap-2">
                         <i className="fa-regular fa-clock"></i>
-                        <div className="text-sm">{patient.Time}</div>
+                        <div className="text-sm">
+                          {patient.appointment_time}
+                        </div>
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-[#676F93]">
                       <div className="flex items-center gap-2">
-                        <i
-                          className={`fa-solid fa-star text-white ${
-                            patient.isAvailable
-                              ? "bg-[#66CB9F]"
-                              : "bg-[#FAB592]"
-                          } p-[3px] text-[12px] rounded-full border-[#676F93]`}
-                        ></i>
+                        <i className="fa-solid fa-star text-white bg-[#66CB9F] p-[3px] text-[12px] rounded-full border-[#676F93]"></i>
                         <div className="text-sm">{patient.doctor}</div>
                       </div>
                     </td>
@@ -167,28 +115,31 @@ export default function App() {
                       <div className="flex justify-center">
                         <button
                           className="relative  hover:bg-gray-100 p-2 rounded-full"
-                          onClick={() => handleActionClick(patient.id)}
+                          onClick={() =>
+                            handleActionClick(patient.patient_name)
+                          }
                           onBlur={() => handleButtonBlur()}
                         >
                           <i className="fa-solid fa-ellipsis-vertical text-gray-400 text-xl"></i>
-                          {isMenuOpen && selectedId === patient.id && (
-                            <div
-                              className={`absolute ${
-                                index === appointmentList.length - 1
-                                  ? "bottom-8"
-                                  : "bottom-100%"
-                              } right-0 bg-white shadow-lg rounded-lg overflow-hidden p-2 z-20`}
-                            >
-                              <button className="w-full flex gap-2 items-center text-left hover:bg-gray-100 py-2 px-4 text-sm rounded-md text-[#676F93]">
-                                <i className="fa-solid fa-pen-to-square"></i>
-                                Edit
-                              </button>
-                              <button className="w-full flex gap-2 items-center text-left text-red-500 hover:bg-red-100 py-2 px-4 text-sm rounded-md">
-                                <i className="fa-solid fa-trash"></i>
-                                Delete
-                              </button>
-                            </div>
-                          )}
+                          {isMenuOpen &&
+                            selectedPatient === patient.patient_name && (
+                              <div
+                                className={`absolute ${
+                                  index === appointmentList.length - 1
+                                    ? "bottom-8"
+                                    : "bottom-100%"
+                                } right-0 bg-white shadow-lg rounded-lg overflow-hidden p-2 z-20`}
+                              >
+                                <button className="w-full flex gap-2 items-center text-left hover:bg-gray-100 py-2 px-4 text-sm rounded-md text-[#676F93]">
+                                  <i className="fa-solid fa-pen-to-square"></i>
+                                  Edit
+                                </button>
+                                <button className="w-full flex gap-2 items-center text-left text-red-500 hover:bg-red-100 py-2 px-4 text-sm rounded-md">
+                                  <i className="fa-solid fa-trash"></i>
+                                  Delete
+                                </button>
+                              </div>
+                            )}
                         </button>
                       </div>
                     </td>
