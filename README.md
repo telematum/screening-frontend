@@ -1,17 +1,36 @@
-# screening-frontend
-Repository for screening frontend Dev Candidates
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS.
+## Getting Started
 
-We specifically request that you refrain from using AI or automated tools in your assessment. We value your personal insights and development skills in this evaluation.
+First, run the development server:
 
-We are interested in your perspective on the development. Your responses will play a crucial role in our evaluation process.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Looking forward to your response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Deliverables
-![](Figma-Mockup.png)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-After carefully evaluating the mockup, please create a React application that calls this mock JSON (https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json) and display the data. Save time by not placing images; instead, use colored placeholders.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Once completed, please raise a PR in this repository with the source code and the built result (the 'dist' folder) as well. Ensure to mention your email and name in the PR, as that would allow us to relate your application with the PR
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
