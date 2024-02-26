@@ -1,4 +1,3 @@
-import React from "react"
 import AppointmentManager from "./AppointmentManager"
 
 const App = () => {
