@@ -7,7 +7,7 @@ We specifically request that you refrain from using AI or automated tools in you
 
 We are interested in your perspective on the development. Your responses will play a crucial role in our evaluation process.
 
-Looking forward to response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
+Looking forward to your response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
 
 ## Deliverables
 ![](Figma-Mockup.png)
