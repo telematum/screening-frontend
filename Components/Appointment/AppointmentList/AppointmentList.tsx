@@ -8,8 +8,11 @@ import {
 import { GoClock } from "react-icons/go";
 import { CiCalendarDate } from "react-icons/ci";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import star from '@/asset/icons/Star.png'
 
 import moment from"moment";
+import User from "./User";
+import Image from "next/image";
 
 const data = [
     {
@@ -64,7 +67,9 @@ const data = [
 
 const keys = ['PATIENTS', 'DATE', 'TIME', 'DOCTOR', 'INJURY', 'ACTION']
 
+
 export default function AppointmentList() {
+
   return (
     <Table>
       <TableHead>
@@ -76,7 +81,7 @@ export default function AppointmentList() {
         {data.map((row, i) => (
           <TableRow key={i}>
             <TableCell>
-                <label>{row.patient_name}</label>
+                <User name={row.patient_name} number={row.mobile_number}/>
               </TableCell>
               <TableCell>
                 <label className="text-base text-grayShade-6 flex gap-2 items-center"><CiCalendarDate/>{moment(row.appointment_date).format( 'DD MMM YYYY')}</label>
@@ -85,7 +90,7 @@ export default function AppointmentList() {
                 <label className="text-base text-grayShade-6 flex gap-2 items-center"><GoClock/> {row.appointment_time}</label>
               </TableCell>
               <TableCell>
-                <label className="text-base text-grayShade-6">{row.doctor}</label>
+                <label className="text-base text-grayShade-6 flex gap-2 items-center"><Image className="w-[16px]" src={star} alt={"star"}/> {row.doctor}</label>
               </TableCell>
               <TableCell>
                 <label className="bg-blueShade-1 text-sm font-medium py-1 px-2 text-blueShade-2 rounded-lg">{row.injury}</label>

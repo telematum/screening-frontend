@@ -1,3 +1,5 @@
+"use client"
+
 import s from "./Appointment.module.scss";
 import AppointmentList from "./AppointmentList";
 
