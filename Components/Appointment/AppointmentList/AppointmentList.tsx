@@ -5,6 +5,11 @@ import {
   TableHead,
   TableRow,
 } from "@/Components/Table";
+import { GoClock } from "react-icons/go";
+import { CiCalendarDate } from "react-icons/ci";
+import { BsThreeDotsVertical } from "react-icons/bs";
+
+import moment from"moment";
 
 const data = [
     {
@@ -64,7 +69,7 @@ export default function AppointmentList() {
     <Table>
       <TableHead>
         <TableRow>
-            {keys.map((item, i)=><TableCell key={i}><label className="text-grayShade-5 text-base font-normal">{item}</label></TableCell>)}
+            {keys.map((item, i)=><TableCell key={i}><label className="text-grayShade-5 text-sm font-normal">{item}</label></TableCell>)}
         </TableRow>
       </TableHead>
       <TableBody>
@@ -74,18 +79,19 @@ export default function AppointmentList() {
                 <label>{row.patient_name}</label>
               </TableCell>
               <TableCell>
-                <label>{row.appointment_date}</label>
+                <label className="text-base text-grayShade-6 flex gap-2 items-center"><CiCalendarDate/>{moment(row.appointment_date).format( 'DD MMM YYYY')}</label>
               </TableCell>
               <TableCell>
-                <label>{row.appointment_time}</label>
+                <label className="text-base text-grayShade-6 flex gap-2 items-center"><GoClock/> {row.appointment_time}</label>
               </TableCell>
               <TableCell>
-                <label>{row.doctor}</label>
+                <label className="text-base text-grayShade-6">{row.doctor}</label>
               </TableCell>
               <TableCell>
-                <label>{row.injury}</label>
+                <label className="bg-blueShade-1 text-sm font-medium py-1 px-2 text-blueShade-2 rounded-lg">{row.injury}</label>
               </TableCell>
               <TableCell>
+                <BsThreeDotsVertical className="text-blueShade-3 cursor-pointer ml-3"/>
               </TableCell>
           </TableRow>
         ))}

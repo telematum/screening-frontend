@@ -21,6 +21,13 @@ const config: Config = {
           3: '#fafafb',
           4: '#edf2f7',
           5: '#8492a6',
+          6: '#425466',
+        },
+
+        blueShade: {
+          1: '#e4ecf7',
+          2: '#505780',
+          3: '#dbe3f0',
         }
       }
     },
