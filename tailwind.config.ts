@@ -17,7 +17,10 @@ const config: Config = {
       colors: {
         grayShade: {
           1: '#e9eaeb',
-          2: '#7a7a9d'
+          2: '#7a7a9d',
+          3: '#fafafb',
+          4: '#edf2f7',
+          5: '#8492a6',
         }
       }
     },

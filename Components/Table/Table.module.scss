@@ -1,0 +1,50 @@
+.table {
+    @apply w-full border-collapse border-spacing-x-[15px];
+    
+    td {
+      @apply px-[30px];
+    }
+  }
+  
+  .cell {
+    @apply table-cell p-[12px];
+  }
+  
+  .row {
+    @apply table-row border-b border-grayShade-4;
+  }
+  
+    .table__cell--header {
+      @apply sticky z-10 top-0;
+    }
+
+
+
+  .head{
+    > .row {
+        @apply bg-grayShade-3 border-b border-grayShade-4 ;
+    }
+  }
+  
+  .tbody {
+    @apply table-header-group text-gray-800;
+    
+    > .row {
+      
+      > :first-child {
+        @apply rounded-l;
+      }
+      
+      > :last-child {
+        @apply rounded-r ;
+      }
+    }
+    
+    > :first-child {
+      @apply rounded-l;
+    }
+    
+    > :last-child {
+      @apply rounded-r border-none;
+    }
+  }
