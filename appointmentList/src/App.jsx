@@ -1,11 +1,11 @@
 import './App.css'
-import AppointmentList from './components/AppointmentList'
+import AppointmentsPage from './components/AppointmentsPage'
 
 function App() {
 
   return (
     <>
-      <AppointmentList/>
+      <AppointmentsPage/>
     </>
   )
 }
