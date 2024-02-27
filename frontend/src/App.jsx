@@ -3,19 +3,22 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [data, setData] = useState([]);
+ const [load, setLoad] = useState(false);
 
   useEffect(() => {
+setLoad(true);
     fetch('https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json')
       .then(res => res.json())
       .then(data => setData(data.appointments))
       .catch(error => console.error('Error fetching data:', error));
+setLoad(false);
   }, []);
 
   return (
     <>
       <div className="w-full h-full sm:rounded-lg ">
         <div className="flex items-center justify-between flex-column flex-wrap md:flex-row space-y-4 md:space-y-0 pb-4 bg-white">
-          <div className="mx-9 text-2xl font-bold text-gray-400 mt-4">
+          <div className="mx-9 text-2xl font-bold text-gray-400 mt-8">
             Today's Appointment List
           </div>
         </div>
@@ -49,12 +52,13 @@ function App() {
               </tr>
             </thead>
             <tbody>
-              {data.map((e, index) => (
+          
+              { load ? <h4 className='text-2xl px-10 '>Loading..</h4> : data.map((e, index) => (
                 <tr key={index} className="bg-white border-b hover:bg-gray-50">
                   <td className="w-4 p-4">
                   </td>
                   <th scope="row" className="flex items-center px-6 py-4 text-gray-900 whitespace-nowrap dark:text-white">
-                    <img className="w-10 h-10 rounded-full" src="https://xsgames.co/randomusers/assets/avatars/male/42.jpg" alt="Jese image" />
+                    <img className="w-10 h-10 rounded-full" src={"https://xsgames.co/randomusers/assets/avatars/male/42.jpg" || "https://xsgames.co/randomusers/assets/avatars/female/47.jpg"} />
                     <div className="ps-3">
                       <div className="text-base text-black font-bold">{e.patient_name}</div>
                       <div className="font-normal text-gray-500">{e.mobile_number}</div>
