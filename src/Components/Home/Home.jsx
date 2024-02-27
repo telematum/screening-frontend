@@ -64,22 +64,22 @@ const Home = () => {
           <table className="w-full rounded-lg">
             <thead className="bg-gray-100 border-b-2 border-gray-200 uppercase">
               <tr>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left text-gray-150">
+                <th className=" p-3  text-sm font-semibold tracking-wide text-left opacity-70  font-medium">
                   Patient
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className=" p-3  text-sm font-semibold tracking-wide text-left opacity-70  font-medium ">
                   Date
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className=" p-3  text-sm font-semibold tracking-wide text-left opacity-70  font-medium ">
                   Time
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className=" p-3  text-sm font-semibold tracking-wide text-left opacity-70  font-medium ">
                   Doctor
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className=" p-3  text-sm font-semibold tracking-wide text-left opacity-70  font-medium ">
                   Injury
                 </th>
-                <th className="p-3 text-sm font-semibold tracking-wide text-left">
+                <th className=" p-3  text-sm font-semibold tracking-wide text-left opacity-70  font-medium ">
                   Action
                 </th>
               </tr>
@@ -89,10 +89,11 @@ const Home = () => {
                 <tr
                   key={index}
                   className="bg-white 
-              divide-y divide-gray-100
+              border-b
+              hover:bg-gray-100
               "
                 >
-                  <td className="p-3 text-sm text-gray-700 hover:gray  whitespace-nowrap">
+                  <td className="px-3 py-2 text-sm text-gray-700 hover:gray  whitespace-nowrap ">
                     <div className="flex space-x-2 items-center">
                       <img
                         src={getProfileImage(index)}
