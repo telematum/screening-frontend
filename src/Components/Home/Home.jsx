@@ -143,7 +143,7 @@ const Home = () => {
                         <StarCircleIcon
                           starColor="#fff"
                           circleColor={
-                            index == 3 || index == 4 ? "#FFD43B" : "#63E6BE"
+                            index === 3 || index === 4 ? "#FFD43B" : "#63E6BE"
                           }
                         />
                       </span>
