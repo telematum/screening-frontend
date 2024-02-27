@@ -90,7 +90,10 @@ const AppointmentTable = () => {
                 <td className="px-4 py-2">
                   <div className="flex justify-center">
                     <button className="flex items-center gap-2">
-                      <MoreVertical size={20} className="opacity-30" />
+                      <MoreVertical
+                        size={20}
+                        className="opacity-30 cursor-pointer"
+                      />
                     </button>
                   </div>
                 </td>
