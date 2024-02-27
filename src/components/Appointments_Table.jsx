@@ -5,6 +5,7 @@ import { MdStars } from "react-icons/md";
 import { MdOutlineMoreVert } from "react-icons/md";
 import DialogBox from "./DialogBox";
 
+// Sample Data's
 const appointments = [
   {
     patient_name: "John Doe",
@@ -63,21 +64,25 @@ const appointments = [
 ];
 
 const AppointmentTable = () => {
-  const [appointmentList, setAppointmentList] = useState([]);
-  const [selectedAppointment, setSelectedAppointment] = useState(null);
+  const [appointmentList, setAppointmentList] = useState([]); // State for storing appointment list
+  const [selectedAppointment, setSelectedAppointment] = useState(null); // State for managing selected appointment
 
+  // Initialize appointment list on component mount
   useEffect(() => {
     setAppointmentList(appointments);
   }, []);
 
+  // Function to open dialog for a selected appointment
   const openDialog = (appointment) => {
     setSelectedAppointment(appointment);
   };
 
+  // Function to close dialog
   const closeDialog = () => {
     setSelectedAppointment(null);
   };
 
+  // Function to delete an appointment
   const deleteAppointment = (patient_name) => {
     const updatedList = appointmentList.filter(
       (appointment) => appointment.patient_name !== patient_name
@@ -85,10 +90,13 @@ const AppointmentTable = () => {
     setAppointmentList(updatedList);
     setSelectedAppointment(null);
   };
+
+  // Function to generate random color
   const randomColor = () => {
     return "#" + Math.floor(Math.random() * 16777215).toString(16);
   };
 
+  // Function to get the first letter of a name
   const getFirstLetter = (name) => {
     if (!name) return "";
     return name.charAt(0).toUpperCase();
@@ -96,6 +104,7 @@ const AppointmentTable = () => {
 
   return (
     <>
+      {/* Desktop view */}
       <div className="container h-screen mx-auto overflow-x-auto hidden md:block">
         <h1 className="text-2xl font-medium mb-4 text-neutral-500 py-6">
           Today&apos;s Appointment List
@@ -113,9 +122,11 @@ const AppointmentTable = () => {
               </tr>
             </thead>
             <tbody>
+              {/* Map through appointments and render table rows */}
               {appointmentList.map((appointment, index) => (
                 <tr key={index} className="hover:bg-gray-100">
                   <td className="px-4 py-3 border-b whitespace-nowrap">
+                    {/* Patient avatar */}
                     <div className="flex items-center gap-3">
                       <div
                         className="avatar-placeholder w-12 h-12 flex items-center justify-center rounded-full shadow-lg hover:shadow-2xl transition-all cursor-pointer transition-all"
@@ -126,6 +137,7 @@ const AppointmentTable = () => {
                         </span>
                       </div>
 
+                      {/* Patient details */}
                       <div className="flex flex-col">
                         <span className="font-bold">
                           {appointment.patient_name}
@@ -136,18 +148,21 @@ const AppointmentTable = () => {
                       </div>
                     </div>
                   </td>
+                  {/* Appointment date */}
                   <td className="px-4 py-2 border-b">
                     <div className="flex items-center gap-2 text-neutral-500">
                       <CiCalendarDate size={20} />
                       {appointment.appointment_date}
                     </div>
                   </td>
+                  {/* Appointment time */}
                   <td className="px-4 py-2 border-b">
                     <div className="flex items-center gap-1 text-neutral-500">
                       <TbProgressCheck size={20} />
                       {appointment.appointment_time}
                     </div>
                   </td>
+                  {/* Doctor */}
                   <td className="px-4 py-2 border-b">
                     <div className="flex items-center gap-1 text-neutral-500">
                       <MdStars
@@ -163,11 +178,13 @@ const AppointmentTable = () => {
                       </span>
                     </div>
                   </td>
+                  {/* Injury */}
                   <td className="px-4 py-2 border-b">
                     <span className="px-2 py-1 rounded-md bg-slate-200 text-xs text-zinc-700 font-medium">
                       {appointment.injury}
                     </span>
                   </td>
+                  {/* Action */}
                   <td className="px-4 py-2 border-b">
                     <div
                       className="flex items-center justify-start cursor-pointer"
@@ -185,25 +202,29 @@ const AppointmentTable = () => {
           </table>
         </div>
       </div>
+
+      {/* Mobile view */}
       <div className="grid grid-cols-1 gap-4 md:hidden p-5 bg-gradient-to-r from-gray-50 to-gray-100">
         <h2 className="text-lg font-semibold text-neutral-500">
           Today&apos; Appointments
         </h2>
+        {/* Map through appointments and render mobile cards */}
         {appointmentList.map((appointment, index) => (
           <div
             key={index}
             className="flex items-center justify-between p-4 rounded-md backdrop-blur-sm	shadow-md transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
           >
+            {/* Patient avatar and details */}
             <div className="flex items-center gap-3">
               <div className="flex flex-col">
-              <div
-                        className="avatar-placeholder w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:shadow-2xl transition-all"
-                        style={{ backgroundColor: randomColor() }}
-                      >
-                        <span className="text-xl text-slate-100	">
-                          {getFirstLetter(appointment.patient_name)}
-                        </span>
-                      </div>
+                <div
+                  className="avatar-placeholder w-10 h-10 flex items-center justify-center rounded-full shadow-lg hover:shadow-2xl transition-all"
+                  style={{ backgroundColor: randomColor() }}
+                >
+                  <span className="text-xl text-slate-100	">
+                    {getFirstLetter(appointment.patient_name)}
+                  </span>
+                </div>
                 <span className="font-bold text-sm text-neutral-500">
                   {appointment.patient_name}
                 </span>
@@ -212,6 +233,7 @@ const AppointmentTable = () => {
                 </span>
               </div>
             </div>
+            {/* Appointment date and time */}
             <div className="flex flex-col items-center gap-1">
               <span className="text-sm font-medium text-neutral-500">D/T</span>
               <div className="flex items-center gap-2 text-neutral-500 text-xs">
@@ -221,12 +243,14 @@ const AppointmentTable = () => {
                 {appointment.appointment_time}
               </div>
             </div>
+            {/* Doctor */}
             <div className="flex flex-col items-center gap-1">
               <span className="text-sm font-medium text-neutral-500">Dr.</span>
               <span className="text-xs italic font-medium text-neutral-500">
                 {appointment.doctor}
               </span>{" "}
             </div>
+            {/* Action */}
             <div
               className="flex items-center justify-start cursor-pointer transform hover:scale-110"
               onClick={() => openDialog(appointment)}
@@ -239,6 +263,8 @@ const AppointmentTable = () => {
           </div>
         ))}
       </div>
+
+      {/* Dialog Box */}
       <DialogBox
         isOpen={selectedAppointment !== null}
         onClose={closeDialog}

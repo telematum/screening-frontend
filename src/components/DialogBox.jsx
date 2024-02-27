@@ -1,6 +1,8 @@
+// Importing necessary icons from react-icons library
 import { CiCircleRemove } from "react-icons/ci";
 import { PiEyeClosedThin } from "react-icons/pi";
 
+// DialogBox component
 const DialogBox = ({ isOpen, onClose, onDelete, appointment }) => {
   return (
     isOpen && (
@@ -11,6 +13,7 @@ const DialogBox = ({ isOpen, onClose, onDelete, appointment }) => {
             <strong>Patient Name:</strong> {appointment.patient_name}
           </p>
           <div className="flex">
+            {/* Close button */}
             <button
               onClick={onClose}
               className="mt-4 px-4 py-2 bg-zinc-400	 text-white rounded-lg shadow-md hover:bg-zinc-600 flex items-center gap-2 hover:drop-shadow-2xl"
@@ -18,6 +21,7 @@ const DialogBox = ({ isOpen, onClose, onDelete, appointment }) => {
               <PiEyeClosedThin />
               Close
             </button>
+            {/* Delete button */}
             <button
               onClick={() => onDelete(appointment.patient_name)}
               className="mt-4 ml-4 px-4 py-2 bg-rose-500 text-white rounded-lg shadow-md hover:bg-rose-600 flex items-center gap-2 hover:drop-shadow-2xl"
