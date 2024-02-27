@@ -3,27 +3,10 @@ import calendarIcon from "../assets/calendarIcon.png";
 import clockIcon from "../assets/clockIcon.png";
 import greenStarIcon from "../assets/greenStarIcon.png";
 import verticalDots from "../assets/verticalDots.png";
-
-type TableProps = {
-  heading: string;
-  dataURL: string;
-  tableHeadings: string[];
-};
-
-type Appointment = {
-  patient_name: string;
-  mobile_number: string;
-  injury: string;
-  doctor: string;
-  appointment_time: string;
-  appointment_date: string;
-};
+import { Appointment, TableProps } from "../types/TableTypes";
 
 const Table: React.FC<TableProps> = ({ heading, dataURL, tableHeadings }) => {
   const { status, data } = useTableData(dataURL);
-  console.log(status);
-  console.log(data);
-
   return (
     <div className="border border-borderGray p-5 rounded-xl flex flex-col gap-5">
       <h1 className="font-bold text-tableHeading">{heading}</h1>
