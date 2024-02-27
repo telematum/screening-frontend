@@ -16,7 +16,6 @@ const Table = () => {
         'Action'
     ];
 
-    const colors=['#222222','#222222','#222222','#222222','#222222']
 
     const [data,setData]=useState([])
 
@@ -39,8 +38,8 @@ const Table = () => {
                 Today's Appointment List
             </h2>
         </div>
-        <div className=''>
-            <table className='w-full text-left'>
+        <div className='overflow-x-auto'>
+            <table className='w-full text-left table-auto'>
                 <thead className='text-sm text-gray-400/80 uppercase tracking-widest'>
                     <tr>
                     {
@@ -57,19 +56,19 @@ const Table = () => {
                       {  data.map((e,i)=>{
                             return(
                                 <tr key={i} className='border-t border-gray-200/80'>
-                                    <td className='py-3 px-4'>
-                                        <Patient color={colors[i]} name={e.patient_name} number={e.mobile_number}/>
+                                    <td className='py-3 px-4 whitespace-nowrap overflow-x-hidden'>
+                                        <Patient name={e.patient_name} number={e.mobile_number}/>
                                     </td>
-                                    <td className='py-3 px-4'>
+                                    <td className='py-3 px-4 whitespace-nowrap'>
                                         <Dates date={e.appointment_date}/>
                                     </td>
-                                    <td className='py-3 px-4'>
+                                    <td className='py-3 px-4 whitespace-nowrap'>
                                         <Time normalTime={e.appointment_time}/>
                                     </td>
-                                    <td className='py-3 px-4'>
+                                    <td className='py-3 px-4 whitespace-nowrap'>
                                         <Doctor name={e.doctor} index={i}/>
                                     </td>
-                                    <td className='py-3 px-4'>
+                                    <td className='py-3 px-4 whitespace-nowrap'>
                                         <Injury injury={e.injury}/>
                                     </td>
                                     <td >
