@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Calendar } from "../Icons/calendar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faEdit } from "@fortawesome/free-regular-svg-icons";
 import { faClock } from "@fortawesome/free-regular-svg-icons";
