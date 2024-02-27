@@ -1,4 +1,5 @@
 # screening-frontend
+
 Repository for screening frontend Dev Candidates
 
 As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS.
@@ -10,6 +11,7 @@ We are interested in your perspective on the development. Your responses will pl
 Looking forward to your response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
 
 ## Deliverables
+
 ![](Figma-Mockup.png)
 
 After carefully evaluating the mockup, please create a React application that calls this mock JSON (https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json) and display the data. Save time by not placing images; instead, use colored placeholders.
