@@ -1,53 +1,71 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { api } from "../Constant/Constant";
-import { COLUMNS_HEADER } from "../Constant/Column";
 
-export default function Table() {
+export default function CustomTable({
+  isLoading = true,
+  columns,
+  rawData = [],
+}) {
   const [data, setData] = useState([]);
+
   useEffect(() => {
-    axios
-      .get(api)
-      .then((res) => {
-        console.log(res.data.appointments);
-        setData(res.data.appointments);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+    setData(rawData);
+  }, [rawData]);
+
   return (
-    <div className="w-full flex justify-center overflow-x-auto p-5 shadow-xl">
-      <table style={{ width: "100%" }} className="overflow-hidden ">
-        <thead className="border-b-2 border-gray-100">
-          {" "}
-          <tr>
-            {COLUMNS_HEADER.map((itr, index) => (
-              <th key={index}>{itr}</th>
+    <div className="overflow-x-auto rounded-xl">
+      <table className="min-w-full ">
+        <thead className="whitespace-nowrap">
+          <tr className="bg-gray-50 border-b  border-gray-200">
+            {columns.map((header, index) => (
+              <th
+                key={index}
+                className="px-6 py-5 text-left text-xs font-bold text-gray-400 uppercase tracking-wider"
+              >
+                {header.header}
+              </th>
             ))}
           </tr>
         </thead>
-        <tbody>
-          {data.map((itr, index) => (
-            <tr key={index}>
-              {" "}
-              <td className="p-3 text-sm text-gray-700 flex items-center gap-x-2 whitespace-nowrap">
-                <div className="inline-block h-10 w-32 rounded-full bg-orange-500"></div>
-                <div>
-                  <p className="font-bold">{itr.patient_name}</p>
-                  <p className="font-light">{itr.mobile_number}</p>
-                </div>
+        <tbody className="divide-y divide-gray-200 whitespace-nowrap">
+          {data.length === 0 && isLoading ? (
+            <tr className="w-full">
+              <td className="py-4" colSpan={columns.length}>
+                <div className="border border-blue-300 shadow rounded-md p-4  w-full mx-auto">
+                  <div className="animate-pulse flex space-x-4">
+                    <div className="rounded-full bg-slate-700 h-10 w-10"></div>
+                    <div className="flex-1 space-y-6 py-1">
+                      <div className="h-2 bg-slate-700 rounded"></div>
+                      <div className="space-y-3">
+                        <div className="grid grid-cols-3 gap-4">
+                          <div className="h-2 bg-slate-700 rounded col-span-2"></div>
+                          <div className="h-2 bg-slate-700 rounded col-span-1"></div>
+                        </div>
+                        <div className="h-2 bg-slate-700 rounded"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>{" "}
               </td>
-              <td>{itr.appointment_date}</td>
-              <td>{itr.appointment_time}</td>
-              <td>{itr.doctor}</td>
-              <td>{itr.injury}</td>
-              <td>{itr.mobile_number}</td>
             </tr>
-          ))}
+          ) : (
+            data?.map((row, rowIndex) => (
+              <tr
+                key={rowIndex}
+                className="hover:bg-gray-100 whitespace-nowrap"
+              >
+                {columns.map((column, colIndex) => (
+                  <td
+                    key={colIndex}
+                    className="px-6 py-2 whitespace-nowrap text-sm text-gray-500"
+                  >
+                    {column.rowCell({ row })}
+                  </td>
+                ))}
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
-      ​
     </div>
   );
 }
