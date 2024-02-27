@@ -6,7 +6,7 @@ const Patient = ({name,number,color}) => {
         
     },[])
   return (
-    <div className='flex flex-row space-x-3'>
+    <div className='flex flex-row space-x-3 items-center'>
         <img className={`w-10 h-10 rounded-full object-cover`} src={profile} alt=''></img>
         <div>
             <h2 className='text-black text-md font-semibold'>

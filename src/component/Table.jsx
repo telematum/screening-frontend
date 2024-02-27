@@ -35,7 +35,7 @@ const Table = () => {
   return (
     <div className='w-full ring-1 ring-gray-200/80 rounded-[40px] p-8 flex-col flex space-y-5'>
         <div>
-            <h2 className='text-xl text-gray-500/75 font-semibold tracking-wide'>
+            <h2 className='text-xl text-slate-500/80 font-semibold tracking-wide'>
                 Today's Appointment List
             </h2>
         </div>

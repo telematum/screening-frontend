@@ -26,7 +26,7 @@ const Time = ({normalTime}) => {
   return (
     <div className='flex flex-row space-x-1 items-center'>
         <IoMdTime className='w-8 h-8 text-slate-500'/>
-        <h2 className='text-xl text-slate-500 font-medium'>
+        <h2 className='text-[18px] text-slate-500 font-medium'>
             {fullTime}
         </h2>
     </div>

@@ -21,7 +21,7 @@ const Dates = ({date}) => {
   return (
     <div className='flex flex-row space-x-2 items-center'>
         <LuCalendar className='text-slate-500 w-5 h-5'/>
-        <h2 className='text-xl text-slate-500 font-medium'>
+        <h2 className='text-[18px] leading-7 text-slate-500 font-medium'>
             {fullDate}
         </h2>
     </div>
