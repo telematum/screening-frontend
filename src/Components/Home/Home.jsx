@@ -1,13 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCalendar,
-  faClock,
-  faCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faCalendar, faClock } from "@fortawesome/free-solid-svg-icons";
 import StarCircleIcon from "../CustumIcon";
-// import { faCircleStar } from "../CustumIcon";
+
 import profile1 from "../../assets/girl-1.avif";
 import profile2 from "../../assets/girl2.avif";
 import profile3 from "../../assets/Mark Haddon.jpg";
