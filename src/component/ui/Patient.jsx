@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-
+import profile from '../../../src/profile.webp'
 const Patient = ({name,number,color}) => {
 
     useEffect(()=>{
@@ -7,12 +7,12 @@ const Patient = ({name,number,color}) => {
     },[])
   return (
     <div className='flex flex-row space-x-3'>
-        <div className={`w-10 h-10 rounded-full bg-[#222222]`}></div>
+        <img className={`w-10 h-10 rounded-full object-cover`} src={profile} alt=''></img>
         <div>
             <h2 className='text-black text-md font-semibold'>
                 {name}
             </h2>
-            <p className='text-gray-400/80 font-medium text-sm'>+ {number.split('-').join(' ')}</p>
+            <p className='text-gray-500/70 font-medium text-sm'>+ {number.split('-').join(' ')}</p>
         </div>
     </div>
   )
