@@ -1,0 +1,1 @@
+export const headers = ['patients', 'date', 'time', 'doctor', 'injury'];
