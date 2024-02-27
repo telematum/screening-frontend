@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-grid {
+  display: grid;
+  grid-template-columns: 1.6fr repeat(4, 1fr) 0.5fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
