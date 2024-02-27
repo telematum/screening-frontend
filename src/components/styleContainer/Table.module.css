@@ -1,0 +1,58 @@
+.firstContainer {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.mainContainer {
+  padding: 3%;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #eeedeb;
+  margin-top: 2%;
+}
+
+.firstText {
+  font-size: 25px;
+  font-weight: 500;
+  color: #35374b;
+}
+
+.titles {
+  font-size: 15px;
+  color: #b4b4b8;
+}
+
+.tableContainer {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.patient {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2%;
+}
+
+.patientName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+}
+
+.mobileNumber {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b4b4b8;
+}
+
+.commonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.date {
+  padding-left: 2%;
+  font-size: 19px;
+  font-weight: 600;
+  color: #b4b4b8;
+}
