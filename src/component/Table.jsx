@@ -40,7 +40,7 @@ const Table = () => {
         </div>
         <div className='overflow-x-auto'>
             <table className='w-full text-left table-auto'>
-                <thead className='text-sm text-gray-400/80 uppercase tracking-widest'>
+                <thead className='text-sm text-gray-400/80 uppercase tracking-wider'>
                     <tr>
                     {
                         headers.map((e,i)=>{
