@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 function AppointmentList({ appointment }) {
   return (
-    <div className="rounded-xl">
+    <div className="rounded-xl border-2 border-gray-300 rounded-xl my-3 md:border-0 ">
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6  gap-4 justify-center items-center  p-4 my-3">
         <div className="flex gap-3 ">
           <div className="rounded-full h-9 w-9 bg-red-400" />

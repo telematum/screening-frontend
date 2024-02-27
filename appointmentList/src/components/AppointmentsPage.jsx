@@ -12,7 +12,7 @@ function AppointmentsPage() {
   }, []);
 
   return (
-    <div className="m-4 p-4 rounded-xl border-2 border-gray-500">
+    <div className="m-4 p-4 rounded-xl border-2 border-gray-500 ">
       <h2 className="text-gray-600 font-bold text-xl">Today's Appointment List</h2>
 
       <div className="rounded-xl mt-4">
