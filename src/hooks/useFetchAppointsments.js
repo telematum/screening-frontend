@@ -1,5 +1,5 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
+import { fetchAppointments } from "../gateways/appointmentGateway";
 
 const useFetchAppointments = () => {
   const [appointmentsData, setAppointmentsData] = useState({
@@ -12,9 +12,7 @@ const useFetchAppointments = () => {
       setAppointmentsData({ data: [], isLoading: true });
 
       try {
-        const response = await axios.get(
-          "https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json"
-        );
+        const response = await fetchAppointments();
 
         setAppointmentsData({
           data: response?.data?.appointments || [],
