@@ -9,12 +9,14 @@ const Final = async () => {
   const { appointments } = await getData();
 
   return (
-    <div className="m-20 p-5 border rounded-lg">
-      <h1 className="py-6 text-3xl">Todays Appointment list</h1>
+    <div className="m-20 p-5 border rounded-[3rem]">
+      <h1 className="py-6 px-5 text-3xl font-medium text-gray-600 dark:text-gray-400">
+        Todays Appointment list
+      </h1>
       <div className="flex flex-col">
         <div className="-m-1.5 overflow-x-auto">
-          <div className="p-1.5 min-w-full inline-block align-middle">
-            <div className="border rounded-lg shadow overflow-hidden dark:border-gray-700 dark:shadow-gray-900">
+          <div className="p-1.5 px-5 min-w-full inline-block align-middle">
+            <div className="border rounded-[2rem] shadow overflow-hidden dark:border-gray-700 dark:shadow-gray-900">
               <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                 <thead className="bg-gray-50 dark:bg-gray-700">
                   <tr>
