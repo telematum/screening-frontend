@@ -1,12 +1,12 @@
 import { Suspense } from "react";
-import Final from "./components/Final";
+import AppointmentPage from "./components/AppointmentPage";
 import Loading from "./components/Loading";
 
 export default function Home() {
   return (
     <main className="">
       <Suspense fallback={<Loading />}>
-        <Final />
+        <AppointmentPage />
       </Suspense>
     </main>
   );

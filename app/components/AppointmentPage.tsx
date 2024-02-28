@@ -5,7 +5,7 @@ import { FaEllipsisVertical } from "react-icons/fa6";
 import { FcCalendar } from "react-icons/fc";
 import { MdOutlineTimer, MdStars } from "react-icons/md";
 
-const Final = async () => {
+const AppointmentPage = async () => {
   const { appointments } = await getData();
 
   return (
@@ -94,4 +94,4 @@ const Final = async () => {
   );
 };
 
-export default Final;
+export default AppointmentPage;
