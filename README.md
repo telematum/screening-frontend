@@ -10,15 +10,20 @@ Open [https://telematum.netlify.app/](https://telematum.netlify.app/) with your 
 
 ## Technologies Used
 
-- Next.js: Next.js is a React framework for building server-side rendered and statically generated applications.
+- Next.js: Next.js is a React framework for building server-side rendered and statically generated applications.( currently it is one of the frameworks recommended by ReactJs)
 
 - Tailwind CSS: Tailwind CSS is a utility-first CSS framework for quickly building custom designs.
+
 - Icons: React Icons provides popular icon packs as React components.
 
 ## Features
 
+- Implemented react server side data fetching
+
 - Patient Data Table: Displays comprehensive patient data in a tabular format.
+
 - Mobile Responsiveness: Ensures optimal viewing experience across various screen sizes.
+
 - Light and Dark Mode: Adapts to the user's system preferences, offering both light and dark modes for enhanced usability.
 
 ## Setup/Installation
