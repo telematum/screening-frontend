@@ -5,6 +5,8 @@ import "./App.css";
 import { GiAlliedStar } from "react-icons/gi";
 import { IoCalendarOutline } from "react-icons/io5";
 import { CiTimer } from "react-icons/ci";
+import { formatDate } from "./utils/formatDate";
+import { formatTime } from "./utils/formatTime";
 
 function App() {
   const [data, setData] = useState([]);
@@ -30,7 +32,7 @@ function App() {
 
   return (
     <main className="overflow-x-auto mx-24 mt-12 border border-slate-200 p-12 max-sm:px-2 max-sm:py-4 rounded-3xl max-xl:mx-4">
-      <h1 className="text-2xl font-semibold mb-6 text-slate-500 border-l-4 border-yellow-400 px-2">
+      <h1 className="text-2xl font-semibold mb-6 text-slate-500">
         Today's Appointment List
       </h1>
       <table className="w-full mx-auto overflow-hidden">
@@ -66,13 +68,13 @@ function App() {
               <td className="px-8 py-6 max-lg:px-4 max-lg:py-2 max-sm:px-2">
                 <div className="flex gap-2 items-center">
                   <IoCalendarOutline className="text-xl" />
-                  {patient.appointment_date}
+                  {formatDate(patient.appointment_date)}
                 </div>
               </td>
               <td className="px-8 max-lg:px-4 max-sm:px-2">
                 <div className="flex gap-2 items-center">
                   <CiTimer className="text-xl" />
-                  {patient.appointment_time}
+                  {formatTime(patient.appointment_time)}
                 </div>
               </td>
               <td className="px-8 max-lg:px-4 max-sm:px-2">
@@ -87,7 +89,7 @@ function App() {
                 </span>
               </td>
               <td className="px-12 max-lg:px-4 max-sm:px-2">
-                <div className="flex flex-col gap-1">
+                <div className="flex flex-col gap-1 cursor-pointer">
                   <div className="h-1 w-1 bg-stone-500 rounded-full"></div>
                   <div className="h-1 w-1 bg-stone-500 rounded-full"></div>
                   <div className="h-1 w-1 bg-stone-500 rounded-full"></div>
