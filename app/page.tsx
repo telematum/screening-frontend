@@ -4,7 +4,7 @@ import Loading from "./components/Loading";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="container m-auto">
       <Suspense fallback={<Loading />}>
         <AppointmentPage />
       </Suspense>

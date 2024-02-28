@@ -24,6 +24,9 @@ body {
   .th {
     @apply px-6 py-6 text-start  font-bold text-gray-500 uppercase dark:text-gray-400;
   }
+  .th-mobile {
+    @apply px-6 py-3 text-start  font-bold text-gray-500 uppercase dark:text-gray-400;
+  }
   .td {
     @apply whitespace-nowrap text-gray-500 dark:text-gray-400 font-medium;
   }
