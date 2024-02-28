@@ -1,6 +1,6 @@
 # AppointmentsApp
 
-AppointmentsApp: Your Apoointment Dashboard
+AppointmentsApp: Your Appointment Management Dashboard
 
 ---
 
