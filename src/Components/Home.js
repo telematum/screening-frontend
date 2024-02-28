@@ -63,7 +63,7 @@ const Home = () => {
                                <div className='flex items-center gap-2'>
                                <div><IoTimeOutline /></div>
                                 <div className="text-sm leading-5 text-gray-900 font-semibold">
-                                    {d.appointment_date}
+                                    {d.appointment_time}
                                 </div>
                                </div>
                             </td>
@@ -71,7 +71,7 @@ const Home = () => {
                                <div className='flex items-center gap-2'>
                                <div><CiStar /></div>
                                 <div className="text-sm leading-5 text-gray-900 font-semibold">
-                                    {d.appointment_date}
+                                    {d.doctor}
                                 </div>
                                </div>
                             </td>
