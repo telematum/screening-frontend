@@ -2,6 +2,7 @@ import { IStaticMethods } from "preline";
 
 export interface appointmentType {
   appointment_id?: string;
+  name_initials?: string;
   appointment_date: string;
   appointment_time: string;
   doctor: string;

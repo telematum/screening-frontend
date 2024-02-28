@@ -13,7 +13,6 @@
     "@preline/dropdown": "^2.0.2",
     "@preline/overlay": "^2.0.2",
     "firebase": "^10.8.0",
-    "headlessui": "^0.0.0",
     "preline": "^2.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

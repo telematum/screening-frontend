@@ -33,6 +33,12 @@ const App = () => {
     getData();
   }, []);
 
+  const getInitials = (name: string) => {
+    const words = name.split(" ");
+    const initials = words.map((word) => word[0].toUpperCase());
+    return initials.join("");
+  };
+
   const getData = () => {
     setIsLoading(true);
     get(child(ref(database), "/appointments"))
@@ -43,9 +49,9 @@ const App = () => {
             return {
               ...data[item_id],
               appointment_id: item_id,
+              name_initials: getInitials(data[item_id].patient_name),
             };
           });
-
           setAppointments([...tempArr]);
           setIsLoading(false);
         } else {
@@ -130,9 +136,9 @@ const App = () => {
                         appointments.map((item) => (
                           <tr key={item.appointment_id}>
                             <td className="px-6 py-4 w-auto whitespace-nowrap text-sm font-medium text-gray-800 dark:text-gray-200 flex justify-center items-center">
-                              <div className="w-auto flex justify-center items-center">
-                                <div className="rounded-xl bg-red-400 text-2xl text-white uppercase me-2">
-                                  jd
+                              <div className="w-auto h-auto flex justify-center items-center">
+                                <div className="rounded-full bg-red-400 text-2xl text-white uppercase me-2 p-1">
+                                  {item.name_initials}
                                 </div>
                               </div>
                               <div className="w-2/3 flex flex-col justify-center items-start">

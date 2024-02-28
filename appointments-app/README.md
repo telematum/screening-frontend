@@ -1,3 +1,35 @@
+# AppointmentsApp
+
+AppointmentsApp: Your Apoointment Dashboard
+
+---
+
+## Screenshots
+
+### Mobile Device:
+
+<img src="./src/assets/screenshots/mobile_display_SS.png" height='500px'>
+<img src="./src/assets/screenshots/mobile_display_SS_2.png" height='500px'>
+<img src="./src/assets/screenshots/mobile_display_SS_3.png" height='500px'>
+
+### Laptop Device:
+
+<img src="./src/assets/screenshots/desktop_display_SS_1.png" height='500px'>
+<img src="./src/assets/screenshots/desktop_display_SS_2.png" height='500px'>
+<img src="./src/assets/screenshots/desktop_display_SS_3.png" height='500px'>
+<img src="./src/assets/screenshots/desktop_display_SS_4.png" height='500px'>
+<img src="./src/assets/screenshots/desktop_display_SS_5.png" height='500px'>
+
+## Tech/ Framework Used
+
+- React
+- TypeScript
+- TailwindCss
+- Preline
+- Firebase
+- React-icons
+- Google Fonts
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -17,12 +49,12 @@ If you are developing a production application, we recommend updating the config
 export default {
   // other rules...
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    ecmaVersion: "latest",
+    sourceType: "module",
+    project: ["./tsconfig.json", "./tsconfig.node.json"],
     tsconfigRootDir: __dirname,
   },
-}
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
