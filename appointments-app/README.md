@@ -4,6 +4,13 @@ AppointmentsApp: Your Apoointment Dashboard
 
 ---
 
+## Features
+
+- Data is directly fetched from Firebase
+- all CRUD(Create, Read, Update and Delete) can be performed
+- Data can be sorted in ascending order for viewing
+- It is a mobile first view (the dashboard is horizontally scrollable )
+
 ## Screenshots
 
 ### Mobile Device:
