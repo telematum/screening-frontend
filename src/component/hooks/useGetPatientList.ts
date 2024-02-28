@@ -5,8 +5,9 @@ export const useGetPatientList = () => {
 
     const [data, setData] = useState<AppointmentListProps[]>([] as AppointmentListProps[]);
     const [error, setError] = useState<SetStateAction<unknown>>(null);
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState<boolean>(false);
     useEffect(() => {
+        setLoading(true)
         const fetchData = async () => {
             try {
                 const response = await fetch(import.meta.env.VITE_API_URL);
@@ -19,6 +20,9 @@ export const useGetPatientList = () => {
             }
         };
         fetchData();
+        return () => {
+            setLoading(false);
+        }
     }, [])
     return { data, error, loading }
 }
