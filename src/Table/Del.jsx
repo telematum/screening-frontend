@@ -116,7 +116,7 @@ const AppointmentsTable = () => {
         </button>
       ) : (
         <div className="p-5 shadow-lg rounded-2xl border-[1.2px] border-gray-200 ">
-          <div className="py-4 text-gray-400 font-bold">
+          <div className="py-4 px-1 text-gray-400 font-bold">
             Today's Appointments List
           </div>
           <div className="px-2">

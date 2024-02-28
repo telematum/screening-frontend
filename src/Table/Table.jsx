@@ -19,7 +19,7 @@ export default function CustomTable({
             {columns.map((header, index) => (
               <th
                 key={index}
-                className="px-6 py-5 text-left text-xs font-bold text-gray-400 uppercase tracking-wider"
+                className="px-6 py-3.5 text-left text-xs font-bold text-gray-400 uppercase tracking-wider"
               >
                 {header.header}
               </th>
