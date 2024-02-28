@@ -3,6 +3,7 @@
 AppointmentsApp: Your Appointment Management Dashboard
 
 ---
+deployed-site: https://appointmentanagementtool.netlify.app/
 
 ## Features
 
