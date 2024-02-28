@@ -18,14 +18,16 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-end-rgb));
 }
-
+@layer components {
+  .th {
+    @apply px-6 py-6 text-start  font-bold text-gray-500 uppercase dark:text-gray-400;
+  }
+  .td {
+    @apply whitespace-nowrap text-gray-500 dark:text-gray-400 font-medium;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
