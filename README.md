@@ -1,7 +1,7 @@
 # screening-frontend
 Repository for screening frontend Dev Candidates
 
-As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS.
+As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS
 
 We specifically request that you refrain from using AI or automated tools in your assessment. We value your personal insights and development skills in this evaluation.
 
