@@ -6,7 +6,7 @@ const AppointmentPage = async () => {
   const { appointments } = await getData();
 
   return (
-    <div className="m-2 mt-12  md:m-10 p-2 md:p-5 pb-10 border rounded-3xl md:rounded-[3rem]">
+    <div className="m-2 mt-12  md:m-5 md:mt-12 lg:m-10  md:p-5 pb-10 border rounded-3xl md:rounded-[3rem]">
       <h1 className="py-3 pb-4 md:py-6 px-5 text-2xl md:text-3xl font-medium text-gray-600 dark:text-gray-400">
         Todays Appointment list
       </h1>

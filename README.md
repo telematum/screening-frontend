@@ -24,7 +24,7 @@ Open [https://telematum.netlify.app/](https://telematum.netlify.app/) with your 
 
 - Mobile Responsiveness: Ensures optimal viewing experience across various screen sizes.
 
-- Light and Dark Mode: Adapts to the user's system preferences, offering both light and dark modes for enhanced usability.
+- Light and Dark Mode: A toggle button added to set preferences, offering both light and dark modes for enhanced usability.
 
 ## Setup/Installation
 
