@@ -1,9 +1,14 @@
+# Appointment List (Figma to React)
+
+- Converted figma mockup to react component using tailwind for css.
+- Tried to make it responsive as well.
+
 ## Deliverables
 
-![](Figma-Mockup.png)
+![Figma Mockup](https://github.com/Vaishali785/Appointment-list-mockup/blob/main/Problem/Figma-Mockup.png)
 
 ## Result
 
-![](Result.png)
+![Result](https://github.com/Vaishali785/Appointment-list-mockup/blob/main/Solution/Result.png)
 
-Note: As states in the problem statement, images have been replaced by the colored placeholders.
+Note: As stated in the problem statement, images have been replaced by the colored placeholders.
