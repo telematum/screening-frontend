@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  /* font-family: "sen"; */
+}
+th {
+  font-weight: normal;
+}
+.img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
