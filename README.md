@@ -1,17 +1,31 @@
-# screening-frontend
-Repository for screening frontend Dev Candidates
+# Appointment App
 
-As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS.
+Created the App to show Doctors appointment that is fetched for Mock API.
+It has also got responsiveness for all screen sizes and has the light/dark theme feature available. Additionally, this repo also contains test file for testing the Header component using React testing library.
 
-We specifically request that you refrain from using AI or automated tools in your assessment. We value your personal insights and development skills in this evaluation.
+![Main Screen](image.png)
 
-We are interested in your perspective on the development. Your responses will play a crucial role in our evaluation process.
+## Available Scripts
 
-Looking forward to your response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
+In the project directory, you can run:
 
-## Deliverables
-![](Figma-Mockup.png)
+### `npm start`
 
-After carefully evaluating the mockup, please create a React application that calls this mock JSON (https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json) and display the data. Save time by not placing images; instead, use colored placeholders.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Once completed, please raise a PR in this repository with the source code and the built result (the 'dist' folder) as well. Ensure to mention your email and name in the PR, as that would allow us to relate your application with the PR
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
