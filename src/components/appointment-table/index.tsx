@@ -12,7 +12,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ headers }) => {
   return (
-    <div className="w-full flex justify-between text-sm text-gray-400 bg-gray-50 p-4  rounded-t-xl gap-1">
+    <div className="w-full flex justify-between text-sm text-gray-400 bg-gray-50 py-4 pl-4 rounded-t-xl gap-1">
       {headers.map((header) => (
         <span className="w-48" key={header}>
           {header}
@@ -33,7 +33,7 @@ const AppointmentTable: React.FC<AppointmentTableProps> = ({ data }) => {
   return (
     <div className="w-full p-6">
       <Header headers={headerTitles} />
-      <div className="w-full flex flex-col gap-2 p-4">
+      <div className="w-full flex flex-col  divide-y-2">
         {data.map((appointment) => (
           <Row data={appointment} key={appointment.mobile_number} />
         ))}

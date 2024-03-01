@@ -17,7 +17,7 @@ interface RowProps {
 
 const Row: React.FC<RowProps> = ({ data }) => {
   return (
-    <div className="flex justify-between text-sm text-gray-500 gap-1">
+    <div className="flex justify-between text-sm text-gray-500 gap-1 px-4 py-2">
       <div className="flex items-center gap-1 w-48">
         <div className="h-8 w-8 rounded-full bg-black"></div>
         <div className="flex flex-col gap-1">
@@ -39,12 +39,12 @@ const Row: React.FC<RowProps> = ({ data }) => {
         <GiAlliedStar size={16} color="#63e6be" />
         <span>{data.doctor}</span>
       </div>
-      <div className="flex-grow w-48">
-        <span className="bg-slate-200 text-black py-1 px-2 rounded-md">
+      <div className=" w-48 p-2 flex justify-start">
+        <span className="bg-slate-200 text-black py-1 px-2 rounded-md text-xs">
           {data.injury}
         </span>
       </div>
-      <div className="w-48 px-6">
+      <div className="w-48 px-6 py-3">
         <SlOptionsVertical />
       </div>
     </div>
