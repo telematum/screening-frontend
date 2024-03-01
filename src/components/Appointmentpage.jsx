@@ -62,63 +62,6 @@ const Appointmentpage = ({ appointments }) => {
         </table>
     </div>
 </div>
-
-
-
-
-
-
-
-
-    // <div className="mx-16 overflow-x-auto shadow-md border border-gray-200 rounded-lg">
-    //   <table className="w-full text-base text-left text-gray-500">
-    //     <thead className="text-xs text-gray-400 uppercase bg-gray-100">
-    //       <tr>
-    //         <th scope="col" className="px-6 py-7">PATIENTS</th>
-    //         <th scope="col" className="px-6 py-3">DATE</th>
-    //         <th scope="col" className="px-6 py-3">TIME</th>
-    //         <th scope="col" className="px-6 py-3">DOCTOR</th>
-    //         <th scope="col" className="px-6 py-3">INJURY</th>
-    //         <th scope="col" className="px-6 py-3">ACTIONS</th>
-    //       </tr>
-    //     </thead>
-    //     <tbody>
-    //       {appointments.map((appointment, index) => (
-    //         <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-    //            <td className="px-6 py-4 flex items-center">
-    //             <div className={`${colors[index % colors.length]} rounded-full w-10 h-10`}></div>
-    //             <div className="ml-4">
-    //               <div className="font-medium text-gray-900 dark:text-white">{appointment.patient_name}</div>
-    //               <div className="text-sm text-gray-500 dark:text-gray-400">{appointment.mobile_number}</div>
-    //             </div>
-    //           </td>
-    //           <td className="px-6 py-4">
-    //           <FontAwesomeIcon icon={faCalendarAlt} className="mr-2"/>
-    //           {appointment.appointment_date}
-    //           </td>
-    //           <td className="px-6 py-4">
-    //           <FontAwesomeIcon icon={faClock} className="mr-2"/>
-    //           {appointment.appointment_time}
-    //           </td>
-    //           <td className="px-6 py-4">
-    //             <div className="inline-flex items-center justify-center w-[18px] h-[18px] bg-green-500 text-white rounded-full mr-2">
-    //               <FontAwesomeIcon icon={faStar} className='text-white text-xs'/>
-    //             </div>
-    //           {appointment.doctor}
-    //           </td>
-    //           <td className="px-6 py-4">
-    //             <button className=" border-0 bg-blue-200 text-black font-semibold px-3 py-1 rounded-md transition-colors duration-150 hover:bg-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50">
-    //               {appointment.injury}
-    //             </button>
-    //           </td>
-    //           <td className="px-12 py-4  ">
-    //           <FontAwesomeIcon icon={faEllipsisVertical} />
-    //           </td>
-    //         </tr>
-    //       ))}
-    //     </tbody>
-    //   </table>
-    // </div>
   );
 };
 
