@@ -3,6 +3,10 @@
 - Converted figma mockup to react component using tailwind for css.
 - Tried to make it responsive as well.
 
+## Preview
+
+https://telematum-appointment-list-test.netlify.app/
+
 ## Deliverables
 
 ![Figma Mockup](https://github.com/Vaishali785/Appointment-list-mockup/blob/main/Problem/Figma-Mockup.png)
