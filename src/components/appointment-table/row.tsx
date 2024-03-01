@@ -15,11 +15,21 @@ interface RowProps {
   data: Appointment;
 }
 
+function generateRandomColor(): string {
+  const red = Math.floor(Math.random() * 256);
+  const green = Math.floor(Math.random() * 256);
+  const blue = Math.floor(Math.random() * 256);
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
 const Row: React.FC<RowProps> = ({ data }) => {
   return (
     <div className="flex justify-between text-sm text-gray-500 gap-1 px-4 py-2">
       <div className="flex items-center gap-1 w-48">
-        <div className="h-8 w-8 rounded-full bg-black"></div>
+        <div
+          style={{ background: generateRandomColor() }}
+          className="h-8 w-8 rounded-full"
+        ></div>
         <div className="flex flex-col gap-1">
           <span className="text-xs font-bold text-black">
             {data.patient_name}
