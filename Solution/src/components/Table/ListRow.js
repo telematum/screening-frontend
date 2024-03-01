@@ -20,7 +20,7 @@ const ListRow = (props) => {
                     </div>
                 </div>
             </td>
-            <td className='p-4 text-[var(--theme-text-color)] max-[680px]:text-sm'>
+            <td className='p-4 text-[var(--theme-text-color)] max-[680px]:text-sm font-medium'>
                 <div className='flex items-center gap-1'>
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -32,7 +32,7 @@ const ListRow = (props) => {
                     </span>
                 </div>
             </td>
-            <td className='p-4 text-[var(--theme-text-color)] max-[680px]:hidden table-cell'>
+            <td className='p-4 text-[var(--theme-text-color)] max-[685px]:hidden table-cell font-medium'>
                 <div className='flex items-center gap-1'>
                     <span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -44,10 +44,10 @@ const ListRow = (props) => {
                     </span>
                 </div>
             </td>
-            <td className='p-4 text-[var(--theme-text-color)] min-[830px]:table-cell hidden'>
+            <td className='p-4 text-[var(--theme-text-color)] min-[845px]:table-cell hidden font-medium'>
                 <div className='flex items-center gap-1'>
                     <span className={`rounded-full ${props.orange ? 'bg-orange-400' : 'bg-green-500'} p-[2px] pb-[3px] flex items-center`}>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3 fill-white p-0 m-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 fill-white p-0 m-0">
                             <path fillRule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401Z" clipRule="evenodd" />
                         </svg>
                     </span>
