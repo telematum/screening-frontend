@@ -1,6 +1,4 @@
 # Details
-
-Details
 Name: Nikhil Bhagoria
 Email: Nikhilkumar2450@gmail.com
 
