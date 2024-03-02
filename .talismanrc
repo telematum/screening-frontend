@@ -1,0 +1,10 @@
+fileignoreconfig:
+- filename: package-lock.json
+  checksum: 012612fe9d3ca3e04dffb154e211b1a72d2ce7d42590db0e4560881124009545
+- filename: src/api/fetchAppointments.js
+  checksum: 8de370f0b63e4fc2874c146c9708c51b153bccb50d37bb386ec1b0c5da3a50c5
+- filename: src/components/Appointments.jsx
+  checksum: d32271d12107bcb73734c3f8afb7d4f35e6adf634307702fa347be1ace497472
+- filename: src/components/Patient.jsx
+  checksum: b47ae10c26f0ce755171753f4b0370194dee4780f7751e08d5d3604420aebf20
+version: "1.0"

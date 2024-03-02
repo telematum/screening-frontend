@@ -1,17 +1,58 @@
-# screening-frontend
-Repository for screening frontend Dev Candidates
+# Appointment Viewer
+This project displays Appointments made for today
 
-As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS.
+## Table of content
+- [Requirements](#requirements)
+- [Project setup](#project-setup)
+- [Run Application](#run-application)
+- [Technologies used](#technologies-used)
+- [Final Result](#final-result)
+## Requirements
+For development, you will only need Node.js installed on your environement
+### Node
+[Node](https://nodejs.org/en) is really easy to install & now include [NPM](https://www.npmjs.com/). You should be able to run the following command after the installation procedure below.
 
-We specifically request that you refrain from using AI or automated tools in your assessment. We value your personal insights and development skills in this evaluation.
+``` 
+$ node --version
+v0.10.24
 
-We are interested in your perspective on the development. Your responses will play a crucial role in our evaluation process.
+$ npm --version
+1.3.21
+````
 
-Looking forward to your response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
+## Project setup
+1. Clone the project
+```shell
+git clone https://github.com/KeerthanaR2910/aquera.git
+```
+2. install packages
+```shell
+npm install
+```
+## Start Application
+In the project directory, you can run:
 
-## Deliverables
-![](Figma-Mockup.png)
+```bash
+npm run start
+```
 
-After carefully evaluating the mockup, please create a React application that calls this mock JSON (https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json) and display the data. Save time by not placing images; instead, use colored placeholders.
+This command will start the app in http://localhost:3000
 
-Once completed, please raise a PR in this repository with the source code and the built result (the 'dist' folder) as well. Ensure to mention your email and name in the PR, as that would allow us to relate your application with the PR
+## Build Application 
+In the project directory, you can run:
+
+```bash
+npm run build
+```
+
+This command will build the app and add it to dist folder
+
+## Technologies and Libraries used
+1. React
+2. Tailwind css
+3. Axios
+4. React-icons
+
+## Final Result
+
+![](./public/final-result.png)
