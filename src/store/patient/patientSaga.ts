@@ -5,13 +5,11 @@ import { patientListSuccess, patientListError } from './patientActions';
 import axios, { AxiosResponse } from 'axios';
 
 function* patientlist() {
-  console.log('saga');
   const url =
     'https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json';
 
   try {
     const apiResponse: AxiosResponse<any> = yield call(axios.get, url);
-    console.log(apiResponse);
 
     if (apiResponse && apiResponse.status === 200) {
       const responseData = {

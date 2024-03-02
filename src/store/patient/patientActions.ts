@@ -29,7 +29,6 @@ export const patientListSuccess = (data: {
   statusCode: number;
   data: Data;
 }): PatientListSuccess => {
-  console.log(data);
   return {
     type: PATIENT_CONST.PATIENT_LIST_SUCCESS,
     payload: data

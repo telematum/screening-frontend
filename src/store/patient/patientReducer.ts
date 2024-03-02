@@ -1,5 +1,11 @@
 import PATIENT_CONST from './patientConst';
-import { PatientActionTypes } from './patientActions';
+import { PatientActionTypes, Data } from './patientActions';
+
+export interface PatientState {
+  patientList: Data | any;
+  error: string;
+  loading: boolean;
+}
 
 const initialState = {
   patientList: [],
@@ -7,12 +13,9 @@ const initialState = {
   loading: false
 };
 
-const Patient = (state = initialState, action: PatientActionTypes) => {
-  console.log(state, action, 'reducers');
-
+const Patient = (state = initialState, action: PatientActionTypes): PatientState => {
   switch (action.type) {
     case PATIENT_CONST.PATIENT_LIST_REQUEST:
-      console.log('err');
       state = {
         ...state,
         loading: true,
