@@ -110,6 +110,7 @@ function App() {
 													src={
 														hamburgerMenu
 													}
+													alt="hamburger Menu"
 												/>
 											</button>
 										</td>
