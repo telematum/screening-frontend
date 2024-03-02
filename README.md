@@ -6,6 +6,7 @@ This project displays Appointments made for today
 - [Project setup](#project-setup)
 - [Run Application](#run-application)
 - [Technologies used](#technologies-used)
+- [Final output](#final-output)
 ## Requirements
 For development, you will only need Node.js installed on your environement
 ### Node
@@ -51,3 +52,7 @@ This command will build the app and add it to dist folder
 2. Tailwind css
 3. Axios
 4. React-icons
+
+## Final Result
+
+![](./public/final-result.png)
