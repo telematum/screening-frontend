@@ -12,6 +12,8 @@ Open [https://telematum.netlify.app/](https://telematum.netlify.app/) with your 
 
 - Next.js: Next.js is a React framework for building server-side rendered and statically generated applications.( currently it is one of the frameworks recommended by ReactJs)
 
+- TypeScript: All the components are creating with TS and with proper type declartion.
+
 - Tailwind CSS: Tailwind CSS is a utility-first CSS framework for quickly building custom designs.
 
 - Icons: React Icons provides popular icon packs as React components.
