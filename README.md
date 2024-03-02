@@ -6,7 +6,7 @@ This project displays Appointments made for today
 - [Project setup](#project-setup)
 - [Run Application](#run-application)
 - [Technologies used](#technologies-used)
-- [Final output](#final-output)
+- [Final Result](#final-result)
 ## Requirements
 For development, you will only need Node.js installed on your environement
 ### Node
