@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fe62af56.css",
+    "main.js": "/static/js/main.df1aae1a.js",
+    "static/media/starGreen.svg": "/static/media/starGreen.c902f22453e1296cafc6a5f2dbb9ce67.svg",
+    "static/media/yellow.svg": "/static/media/yellow.fd5ef0a9a04e3fc27179d8f45eb72e2b.svg",
+    "static/media/calander.svg": "/static/media/calander.9f98e4309073d1d221fce12f0a6d7ccb.svg",
+    "index.html": "/index.html",
+    "static/media/clock.svg": "/static/media/clock.de7ffa3080f1a44e313c69ada3044e95.svg",
+    "static/media/hamburgerMenu.svg": "/static/media/hamburgerMenu.5bd176f54360dff8d7eeba2506660307.svg",
+    "main.fe62af56.css.map": "/static/css/main.fe62af56.css.map",
+    "main.df1aae1a.js.map": "/static/js/main.df1aae1a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe62af56.css",
+    "static/js/main.df1aae1a.js"
+  ]
+}

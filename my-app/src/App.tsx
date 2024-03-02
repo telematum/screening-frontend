@@ -6,63 +6,10 @@ import clock from "./assets/clock.svg";
 import yellow from "./assets/yellow.svg";
 import starGreen from "./assets/starGreen.svg";
 import hamburgerMenu from "./assets/hamburgerMenu.svg";
+import { data } from "./interface/DataInterface";
+import { Profile } from "./components/Profile";
+import { ImageText } from "./components/ImageText";
 
-interface data {
-	appointments: {
-		patient_name: string;
-		mobile_number: string;
-		appointment_date: string;
-		appointment_time: string;
-		doctor: string;
-		injury: string;
-	}[];
-}
-
-function getRandomColor() {
-	return "#" + Math.floor(Math.random() * 16777215).toString(16);
-}
-
-const Profile = ({ text, mobNo }: { text: string; mobNo: string }) => {
-	return (
-		<td>
-			<div className="flex gap-3 items-center">
-				<div
-					className="profile-image"
-					style={{ backgroundColor: getRandomColor() }}
-				>
-					{" "}
-				</div>
-				<div>
-					<div className="font-semibold text-black text-base">
-						{text}
-					</div>
-					<div className=" text-[13px]">{mobNo}</div>
-				</div>
-			</div>
-		</td>
-	);
-};
-
-const ImageText = ({
-	text,
-	image,
-}: {
-	text: string;
-	image?: string | undefined;
-}) => {
-	return (
-		<td className="">
-			{image && (
-				<img
-					src={image}
-					className="w-[20px] float-left mr-1"
-					alt={text}
-				/>
-			)}
-			<span>{text}</span>
-		</td>
-	);
-};
 
 function App() {
 	const [data, setData] = useState<data>();
