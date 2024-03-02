@@ -1,3 +1,11 @@
+Name - Manisha Gajula
+email - manishagajula@gmail.com
+
+Github Repo = https://github.com/manishagajula/My-Appointment-List
+Live link - https://screeningfrontend.netlify.app/
+
+
+
 # screening-frontend
 Repository for screening frontend Dev Candidates
 
