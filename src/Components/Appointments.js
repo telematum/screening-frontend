@@ -47,9 +47,9 @@ function Appointments() {
 
   return (
     <div>
-      <table className='table align-middle border'>
+      <table className='table align-middle border table-responsive-lg'>
         <thead>
-          <tr className='table-active '>
+          <tr className='table-active'>
             <th className='p-3'>PATIENTS</th>
             <th className='p-3'>DATE</th>
             <th className='p-3'>TIME</th>
@@ -81,7 +81,7 @@ function Appointments() {
                 </div>
               </td>
               <td className=''>
-                <div className='d-flex justify-content-start align-items-center light'>
+                <div className='d-lg-flex justify-content-start align-items-center light'>
                   <MdDateRange size={22} />
                   <p className='m-0 px-1 '>
                     {formatDate(appointment.appointment_date)}
@@ -89,7 +89,7 @@ function Appointments() {
                 </div>
               </td>
               <td>
-                <div className='d-flex justify-content-start align-items-center light'>
+                <div className='d-lg-flex justify-content-start align-items-center light'>
                   <BiTimeFive size={22} />
                   <p className='m-0 px-1'>{appointment.appointment_time}</p>
                 </div>
@@ -110,17 +110,18 @@ function Appointments() {
                 </div>
               </td>
               <td>
-                <p className='m-0'>
-                  <span
-                    className='p-2 rounded fw-bold'
+                <div className='m-0'>
+                  <p
+                    className='p-2 m-0 rounded fw-bold'
                     style={{
                       backgroundColor: '#E0F4FF',
                       color: '#333A73',
+                      display: 'inline-block',
                     }}
                   >
                     {appointment.injury}
-                  </span>
-                </p>
+                  </p>
+                </div>
               </td>
               <td>
                 <div className='d-flex justify-content-start align-items-center'>
@@ -147,7 +148,7 @@ function Appointments() {
         </tbody>
       </table>
       {appointments.length === 0 && (
-        <p className='m-0 text-center fw-bold text-secondary d-flex justify-content-center align-items-center'>
+        <p className='mx-0 my-3 text-center fw-bold text-secondary d-flex justify-content-center align-items-center'>
           No appointments found.
           <button
             onClick={fetchData}
