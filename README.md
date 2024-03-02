@@ -1,17 +1,19 @@
-# screening-frontend
-Repository for screening frontend Dev Candidates
+# Medical Appointment List - React App
 
-As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS.
+This project is a React application that displays a list of medical appointments. It fetches data from an external API and presents the information in a user-friendly format.
 
-We specifically request that you refrain from using AI or automated tools in your assessment. We value your personal insights and development skills in this evaluation.
+## Features
 
-We are interested in your perspective on the development. Your responses will play a crucial role in our evaluation process.
+- **Appointment Data Display:** The app fetches today's appointment data from a provided API endpoint and displays it in a tabular format. The table includes information such as patient names, dates, times, doctors, and injuries.
 
-Looking forward to your response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
+- **Loading Indicator:** While the data is being fetched, a loading indicator is displayed to inform the user that the app is retrieving information.
 
-## Deliverables
-![](Figma-Mockup.png)
+- **Data Formatting Functions:** The app includes utility functions to format mobile numbers, dates, and times.
 
-After carefully evaluating the mockup, please create a React application that calls this mock JSON (https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json) and display the data. Save time by not placing images; instead, use colored placeholders.
+## Technologies Used
 
-Once completed, please raise a PR in this repository with the source code and the built result (the 'dist' folder) as well. Ensure to mention your email and name in the PR, as that would allow us to relate your application with the PR
+- **React:** The application is built using the React library, allowing for a modular and efficient front-end structure.
+
+- **React Icons:** Icons from the `react-icons` library are used to enhance the visual representation of the data.
+
+- **Styling:** Tailwind CSS is used for styling, providing a clean and responsive design.
