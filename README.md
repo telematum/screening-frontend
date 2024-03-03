@@ -1,17 +1,20 @@
-# screening-frontend
-Repository for screening frontend Dev Candidates
 
-As part of our evaluation, we would like to assess your development skills. Therefore, we have set up a short assessment to evaluate the candidate’s skills by converting a simple component to be implemented using React with Tailwind CSS.
+Today's Appointment List Web App <br>
+This web application fetches data from an API endpoint and displays today's appointment list in a table format. It is built using React.js and Tailwind CSS. <br>
 
-We specifically request that you refrain from using AI or automated tools in your assessment. We value your personal insights and development skills in this evaluation.
+Features 
+* Retrieves data from an external API to display today's appointments. 
+* Renders the appointment list in a table with patient details such as name, date, time, doctor, and injury.
+* Provides a loading indicator while fetching data.
+* Handles errors gracefully and displays appropriate error messages if data retrieval fails.
 
-We are interested in your perspective on the development. Your responses will play a crucial role in our evaluation process.
+Technologies Used
+* React.js
+* JavaScript (ES6+)
+* HTML5
+* Tailwind CSS
 
-Looking forward to your response for the assessment on or before March 3, 2024. If you have any questions or concerns, please do not hesitate to reach out.
 
-## Deliverables
-![](Figma-Mockup.png)
+![](project.png)
 
-After carefully evaluating the mockup, please create a React application that calls this mock JSON (https://gist.githubusercontent.com/telematum/7751eec667033ac8acd244542e464e18/raw/d4710c6fb54224a0bd316ecdc5246633aceefce5/todays.json) and display the data. Save time by not placing images; instead, use colored placeholders.
 
-Once completed, please raise a PR in this repository with the source code and the built result (the 'dist' folder) as well. Ensure to mention your email and name in the PR, as that would allow us to relate your application with the PR
