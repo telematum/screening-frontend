@@ -34,7 +34,7 @@ return (
         <thead>
           <tr className='bg-slate-50 border-slate-200 border-b-2 rounded-lg'>
             {
-              patientsHeaders?.map((header)=>(<th key={header} className='w-48 uppercase text-left text-xs text-zinc-400 py-6 px-3'> {header.replaceAll("_", " ").replaceAll("appointment", "")}
+              patientsHeaders?.map((header)=>(<th key={header} className={`${header.includes("patient") ? 'w-64': 'w-48'} uppercase text-left text-xs text-zinc-400 py-6 px-3`}> {header.replaceAll("_", " ").replaceAll("appointment", "")}
               </th>))
             }
             <th className='w-32 uppercase text-left text-zinc-400 p-3 text-xs'>
@@ -46,7 +46,7 @@ return (
         <tbody>
           {patientsData?.map((row, index) => (
             <tr key={index} className='border-b-2 border-slate-200' >
-             <td className=' w-48 capitalize text-gray-500'>
+             <td className=' w-64 capitalize text-gray-500'>
               <div className='p-3 flex justify-start items-center gap-2'>
                 <div className='w-10 h-10 rounded-full p-2 border-2 flex justify-center items-center text-xs'>
 <span className='m-auto'>{row?.patient_name[0]}</span>
