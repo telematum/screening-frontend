@@ -1,0 +1,76 @@
+.header {
+    list-style-type : none ;
+    display : flex ;
+    gap: 100px;
+}
+
+.title {
+    margin-left: 40px;
+    /* margin-top: 40px; */
+    color: gray;
+    padding-top : 20px;
+}
+
+#root{
+    font-family: sans-serif ;
+    color: rgba(89, 94, 99, 0.869);
+    margin: 28px;
+}
+
+.list{
+    /* display: flex; */
+    gap :80px ;
+    margin-left: 40px;
+}
+
+.items {
+    display: flex;
+    gap: 50px;
+}
+ 
+table {
+  width: 100%;
+}
+ td {
+  border-top: 1px solid;
+  border-color: rgb(206, 202, 202);
+  border-radius: 40px;
+}
+
+.table-container {
+    width: 90%;
+    padding: 8px;
+    /* background-color: aliceblue; */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 28px;
+  /* padding: 10px; */
+}
+
+td{
+    padding: 5px;
+}
+th{
+    padding: 8px;
+    padding-top: 16px ;
+    padding-bottom: 16px ;
+    text-align: left;
+    background-color: rgba(236, 231, 231, 0.883);
+}
+
+.injury{
+    background-color: rgb(129, 182, 229);
+    border-radius: 8px;
+    width: auto;
+    padding: 7px;
+    color: white;
+}
+
+.app{
+    /* border: 1px solid gray; */
+    border-radius: 8px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
