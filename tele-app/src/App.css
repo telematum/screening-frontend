@@ -1,0 +1,143 @@
+.field-container {
+  background-color: skyblue;
+  border: 2px solid red;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 17px;
+}
+
+.fields-details {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+.fields-details th,
+.fields-details td {
+  padding: 8px;
+  text-align: left;
+}
+
+.fields-details th:last-child {
+  text-align: center;
+}
+
+.fields-details th {
+  background-color: lightgray;
+}
+
+.patients {
+  display: flex;
+  align-items: center;
+}
+
+.patient-details .patient-placer {
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: antiquewhite;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.patient-details .patient-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.injury-field {
+  border: 2px solid black;
+  background-color: lightgray;
+  width: 100px;
+  border-radius: 10px;
+  text-align: center !important;
+}
+
+.action-field {
+  position: relative;
+  text-align: center;
+}
+
+.action-field::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 6px dotted gray;
+  height: 30px;
+}
+
+.date-field {
+  background-image: url('data:image/svg+xml;utf8,<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="Calendar"><path d="M18.438,4.954H16.5c0-0.346,0-0.691,0-1.036c0-0.124,0-0.248,0-0.372c0-0.262-0.23-0.512-0.5-0.5 c-0.271,0.012-0.5,0.22-0.5,0.5c0,0.469,0,0.939,0,1.408h-7c0-0.346,0-0.691,0-1.036c0-0.124,0-0.248,0-0.372 c0-0.262-0.23-0.512-0.5-0.5c-0.271,0.012-0.5,0.22-0.5,0.5c0,0.469,0,0.939,0,1.408H5.562c-1.378,0-2.5,1.122-2.5,2.5v11 c0,1.379,1.122,2.5,2.5,2.5h12.875c1.379,0,2.5-1.121,2.5-2.5v-11C20.938,6.076,19.816,4.954,18.438,4.954z M5.562,5.954H7.5 c0,0.073,0,0.147,0,0.22c0,0.124,0,0.248,0,0.372c0,0.262,0.23,0.512,0.5,0.5c0.271-0.012,0.5-0.22,0.5-0.5c0-0.197,0-0.394,0-0.592 h7c0,0.073,0,0.147,0,0.22c0,0.124,0,0.248,0,0.372c0,0.262,0.23,0.512,0.5,0.5c0.271-0.012,0.5-0.22,0.5-0.5 c0-0.197,0-0.394,0-0.592h1.937c0.827,0,1.5,0.673,1.5,1.5v1.584H4.062V7.454C4.062,6.627,4.735,5.954,5.562,5.954z M18.438,19.954 H5.562c-0.827,0-1.5-0.673-1.5-1.5v-8.416h15.875v8.416C19.938,19.281,19.265,19.954,18.438,19.954z"></path></g></svg>');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: left center;
+  padding-left: 30px;
+}
+
+.time-field {
+  background-image: url('data:image/svg+xml;utf8,<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="Timer"><g><path d="M2.336,9.685A9.934,9.934,0,0,0,13.592,21.808,9.931,9.931,0,0,0,20.708,7.23,10.046,10.046,0,0,0,12,2.072a.507.507,0,0,0-.5.5v4.2a.5.5,0,0,0,1,0v-4.2l-.5.5a8.935,8.935,0,0,1,8.433,11.892A8.938,8.938,0,0,1,6.468,19.027,9.041,9.041,0,0,1,3.3,9.951c.142-.627-.822-.9-.964-.266Z"></path><path d="M7.4,8.117a.5.5,0,0,1,.707-.707l4.243,4.242h0a.5.5,0,0,1-.707.707Z"></path></g></g></svg>');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px center;
+  padding-left: 40px;
+}
+
+.doctor-field {
+  background-image: url('data:image/svg+xml;utf8,<svg stroke="currentColor" fill="green" stroke-width="0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path fill="green" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px center; 
+  padding-left: 40px; 
+}
+
+.senior-doctor {
+  background-image: url('data:image/svg+xml;utf8,<svg stroke="currentColor" fill="darkgoldenrod" stroke-width="0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M0 0h24v24H0z"></path><path fill="yellow" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm4.24 16L12 15.45 7.77 18l1.12-4.81-3.73-3.23 4.92-.42L12 5l1.92 4.53 4.92.42-3.73 3.23L16.23 18z"></path></svg>');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 10px center; 
+  padding-left: 40px; 
+}
+
+/* Media queries for responsiveness */
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  .field-container {
+    padding: 5px;
+    margin: 0;
+    width: fit-content;
+  }
+
+  .fields-details th,
+  .fields-details td {
+    padding: 0px;
+    width: fit-content;
+  }
+  .patient-details .patient-placer {
+    margin-right: 5px;
+  }
+}
+
+/* styles for iPad  */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .field-container {
+    padding: 30px;
+    margin: 15px;
+  }
+
+  .fields-details th,
+  .fields-details td {
+    padding: 8px;
+  }
+
+  .injury-field {
+    width: 90px;
+  }
+}
