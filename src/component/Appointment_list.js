@@ -44,7 +44,7 @@ const Appointment = () => {
                         data.map((row, index) => {
                             return (
                                 <tr className="border-gray-200 border-b border-opacity-80" key={index} >
-                                    <div className="flex ">
+                                    <div className="flex">
                                         <div className="rounded-full bg bg-red-400 w-9 h-9 my-4">
                                             <p className="m-3 my-2 text-lg  font-extrabold text-red-500">P</p>
 
