@@ -8,6 +8,7 @@ const Appointment = () => {
   const [appointments, setAppointments] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [search, setSearch] = useState('')
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,6 +26,9 @@ const Appointment = () => {
     fetchData();
   }, []);
 
+  const filteredAppointments = appointments.filter((Appointment) => Appointment.patient_name.toLowerCase().includes(search.toLowerCase())
+  )
+
   if (error) {
     return <div>Error: {error.message}</div>;
   }
@@ -38,23 +42,36 @@ const Appointment = () => {
             loading ? (
               <p className='text-red-600 text-center font-bold'>Loading the Data...</p>
             ) : (
-              <table className='w-full whitespace-nowrap'>
-                <thead>
-                  <tr className='text-gray-400 uppercase'>
-                    <th className='py-3'>Patient</th>
-                    <th>Date</th>
-                    <th>Time</th>
-                    <th>Doctor</th>
-                    <th>Injury</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {appointments.map((appointment, index) => (
-                    <Details key={index} info={appointment} />
-                  ))}
-                </tbody>
-              </table>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Search by Name"
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  className='border border-gray-300 rounded-md px-3 py-2 mb-5 w-full max-w-md'
+                />
+                {filteredAppointments.length > 0 ? (
+                  <table className='w-full whitespace-nowrap'>
+                    <thead>
+                      <tr className='text-gray-400 uppercase'>
+                        <th className='py-3 bg-gray-100 rounded-l-lg'>Patient</th>
+                        <th className='bg-gray-100'>Date</th>
+                        <th className='bg-gray-100'>Time</th>
+                        <th className='bg-gray-100'>Doctor</th>
+                        <th className='bg-gray-100'>Injury</th>
+                        <th className='bg-gray-100 rounded-r-lg'>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {filteredAppointments.map((appointment, index) => (
+                        <Details key={index} info={appointment} />
+                      ))}
+                    </tbody>
+                  </table>
+                ) : (
+                  <h1 className='text-center'>Name Not Found</h1>
+                )}
+              </div>
             )
           }
         </div>
