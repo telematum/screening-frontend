@@ -1,0 +1,76 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: mukta,sans-serif ;
+}
+
+tr > *:first-child{
+  padding-left: 0.75rem;
+}
+
+.profile-image{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.mukta-extralight {
+  font-family: "Mukta", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.mukta-light {
+  font-family: "Mukta", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.mukta-regular {
+  font-family: "Mukta", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mukta-medium {
+  font-family: "Mukta", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mukta-semibold {
+  font-family: "Mukta", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.mukta-bold {
+  font-family: "Mukta", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mukta-extrabold {
+  font-family: "Mukta", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.table-enclosing{
+  background: aliceblue;
+  padding-top: 16px;
+}
+
+.table-enclosing table{
+  background-color: white;
+}
+
+table th{
+  background-color: aliceblue;
+  padding-bottom: 1rem;
+}
